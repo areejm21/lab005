@@ -3,17 +3,17 @@ title: "Lab 05 - Nobel laureates"
 output: github_document
   
 ---
-Team Name:
+Team Name:T1
 
 Team Members - Name and Student ID
 
-1.
+1. fatima   1111
 
-2.
+2.dalal  2222
 
-3.
+3.batool
 
-4.
+4.wjdan, gfgfggf
 
 
 
