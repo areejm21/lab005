@@ -1,7 +1,7 @@
 Lab 05 - Nobel laureates
 ================
 
-Team Name:T165
+Team Name:T165ddd
 
 Team Members - Name and Student ID
 
@@ -17,6 +17,10 @@ Team Members - Name and Student ID
 
 Load tidyverse below
 
+``` r
+library(tidyverse)
+```
+
 ## Data
 
 The dataset for this lab can be found as a CSv (comma separated values)
@@ -24,12 +28,33 @@ file in the `data` folder of your repository.
 
 Get the code from the lab document
 
+``` r
+nobel <- read_csv("data/nobel.csv")
+```
+
 ## Get to know your data
 
 1.  How many observations and how many variables are in the dataset? Use
     inline code to answer this question. What does each row represent?
 
-2.  Create a new data frame called `nobel_living` that filters for
+``` r
+library(readxl)
+nobel_prize <- read_csv("data/nobel.csv")
+```
+
+    ## 
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## cols(
+    ##   .default = col_character(),
+    ##   id = col_double(),
+    ##   year = col_double(),
+    ##   born_date = col_date(format = ""),
+    ##   died_date = col_date(format = ""),
+    ##   share = col_double()
+    ## )
+    ## ℹ Use `spec()` for the full column specifications.
+
+1.  Create a new data frame called `nobel_living` that filters for
 
 -   laureates for whom `country` is available
 -   laureates who are people as opposed to organizations (organizations
@@ -46,8 +71,16 @@ again using inline code.
 
 Get the code from the Lab document
 
+``` r
+nobel_living <- nobel %>%mutate(country_us = if_else(country == "USA", "USA", "Other"))
+```
+
 Next, we will limit our analysis to only the following categories:
 Physics, Medicine, Chemistry, and Economics.
+
+``` r
+nobel_living_science <- nobel_living %>%filter(category %in% c("Physics", "Medicine", "Chemistry", "Economics"))
+```
 
 Knit, *commit, and push your changes to GitHub with an appropriate
 commit message. Make sure to commit and push all changed files so that

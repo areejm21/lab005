@@ -3,7 +3,7 @@ title: "Lab 05 - Nobel laureates"
 output: github_document
   
 ---
-Team Name:T165
+Team Name:T165ddd
 
 
 Team Members - Name and Student ID
@@ -26,7 +26,7 @@ knitr::opts_chunk$set(eval = TRUE)
 Load tidyverse below
 
 ```{r load-packages, message = FALSE}
-
+library(tidyverse)
 ```
 
 ## Data
@@ -36,7 +36,7 @@ The dataset for this lab can be found as a CSv (comma separated values) file in 
 Get the code from the lab document
 
 ```{r load-data, message = FALSE}
-
+nobel <- read_csv("data/nobel.csv")
 ```
 
 ## Get to know your data
@@ -46,6 +46,8 @@ Get the code from the lab document
 
 ```{r}
 
+library(readxl)
+nobel_prize <- read_csv("data/nobel.csv")
 ```
 
 
@@ -74,13 +76,13 @@ Confirm that once you have filtered for these characteristics you are left with 
 Get the code from the Lab document
 
 ```{r}
-
+nobel_living <- nobel %>%mutate(country_us = if_else(country == "USA", "USA", "Other"))
 ```
 
 Next, we will limit our analysis to only the following categories: Physics, Medicine, Chemistry, and Economics.
 
 ```{r}
-
+nobel_living_science <- nobel_living %>%filter(category %in% c("Physics", "Medicine", "Chemistry", "Economics"))
 ```
 
 Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.d*
