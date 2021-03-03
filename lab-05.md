@@ -1,7 +1,7 @@
 Lab 05 - Nobel laureates
 ================
 
-Team Name:G5666
+Team Name:G56667
 
 Team Members - Name and Student ID
 
