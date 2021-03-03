@@ -14,7 +14,7 @@ Team Members - Name and Student ID
 
 
 
-```{r setup knir, include = FALSE}
+```{r setup knirf, include = FALSE}
 knitr::opts_chunk$set(eval = TRUE)
 ```
 
