@@ -1,17 +1,11 @@
 Lab 05 - Nobel laureates
 ================
 
-Team Name:T165666
+Team Name:G5666
 
 Team Members - Name and Student ID
 
 1.  fatima 1111
-
-2.dalal 2222
-
-3.batool 33333x
-
-4.wjdan, malak
 
 ## Packages
 
